@@ -7,6 +7,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import getImage from '../../utils/getImage'
 
+
 const defaultValue = {
   select: 'Choose',
   title: 'Title',
@@ -18,6 +19,7 @@ const defaultValue = {
 const Create = () => {
   const history = useHistory()
 
+  const [crawl, setcrawl] = useState(false)
   const [title, setTitle] = useState(defaultValue.title)
   const [desc, setDesc] = useState(defaultValue.shortDesc)
   const [cate, setCate] = useState(defaultValue.category)
@@ -136,6 +138,10 @@ const Create = () => {
 
   return (
     <div className='create-post'>
+
+      <div style={{position:'fixed',bottom:0,right:0}}>
+          <button ><a style={{color:'black'}} href={'/crawl'} target='blank'>Crawl</a></button>
+      </div>
       <div className='create-container'>
         <Link className='back-to-home' to='/'>
           <i className="fas fa-arrow-left"></i>

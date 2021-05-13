@@ -27,6 +27,7 @@ import SignUp from './pages/sign-up'
 import Me from './pages/me'
 import Detail from './pages/detail_post'
 import Create from './pages/create'
+import Crawl from './pages/create/crawl'
 import Update from './pages/update'
 import Search from './pages/search'
 import Loading from './components/Loading'
@@ -69,6 +70,9 @@ function App() {
               </Route>
               <Route axact path="/posts">
                 <Post />
+              </Route>
+              <Route axact path="/crawl">
+                <Crawl/>
               </Route>
               <Route axact path="/search">
                 <Search />
