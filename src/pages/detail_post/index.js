@@ -240,7 +240,9 @@ const DetailEl = (props) => {
                   }
                 </button>
                 <button className='share'>
+                <a href={`http://www.facebook.com/share.php?u=${ window.location.href }`} target='_blank'>
                   <i className="fas fa-share"></i>
+                </a>
                 </button>
               </div>
               <div className='comments'>
